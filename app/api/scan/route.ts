@@ -133,7 +133,7 @@ export async function POST(request: NextRequest) {
 
     // Check for active membership
     const activeMembership = member.memberships[0];
-    const membershipEndDate = new Date(activeMembership.end_date);
+    const membershipEndDate = new Date(activeMembership?.end_date);
     membershipEndDate.setHours(0, 0, 0, 0);
 
     if (membershipEndDate < today || !activeMembership) {
@@ -175,7 +175,7 @@ export async function POST(request: NextRequest) {
       },
       membership: {
         type: activeMembership.type,
-        end_date: activeMembership.end_date.toISOString().split("T")[0], // Format as YYYY-MM-DD
+        end_date: activeMembership?.end_date?.toISOString().split("T")[0], // Format as YYYY-MM-DD
       },
     } as ScanResponse);
   } catch (error) {
