@@ -1,3 +1,5 @@
+/* la route peut servir pour les tests locaux, une edge function identique est utilisée en production */
+
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 

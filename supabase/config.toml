@@ -1,0 +1,6 @@
+# Supabase Configuration for Edge Functions
+# This file configures Edge Functions behavior
+
+# Disable JWT verification for scan function (we use x-api-key instead)
+[functions.scan]
+verify_jwt = false

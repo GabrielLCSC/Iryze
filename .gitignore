@@ -41,3 +41,6 @@ yarn-error.log*
 next-env.d.ts
 
 /app/generated/prisma
+
+# Supabase temp files (contain sensitive project refs and connection strings)
+supabase/.temp/
